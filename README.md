@@ -7,13 +7,11 @@ The detail page lists the character's image, name, and abilities.
 
 
 
-<strong>APPLICATION FEATURES</strong>
+<strong> - APPLICATION FEATURES - </strong>
 
 
-Network : Alamofire
-
-Design : Snapkit,noStoryBoard,Lottie
-
+Network : Alamofire/n
+Design : Snapkit,noStoryBoard,Lottie/n
 Architectural : MVVM
 
 
