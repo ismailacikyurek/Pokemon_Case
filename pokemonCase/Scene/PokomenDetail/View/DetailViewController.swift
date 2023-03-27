@@ -54,16 +54,16 @@ extension DetailViewController : UITableViewDelegate,UITableViewDataSource {
     }
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return detailViewModel.pokemonDetail?.abilities.count ?? 0
+        return detailViewModel.pokemonDetailModel?.abilities.count ?? 0
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = UITableViewCell()
-        cell.textLabel?.text = detailViewModel.pokemonDetail?.abilities[indexPath.row].ability.name
+        cell.textLabel?.text = detailViewModel.pokemonDetailModel?.abilities[indexPath.row].ability.name
         return cell
     }
     func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        if detailViewModel.pokemonDetail?.abilities.count == 0 {
+        if detailViewModel.pokemonDetailModel?.abilities.count == 0 {
             return "Abilities Not Found"
         } else {
            return "Ability"
