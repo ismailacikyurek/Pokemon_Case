@@ -19,7 +19,7 @@ class DetailViewModel {
     
     weak var delegate : DetailViewModelProtocol?
     private let service : WebService = WebService()
- 
+    
     var pokemonDetail : PokemonDetailModel?
     
     func fetchPokemonDetail(_ url : String) {
@@ -29,9 +29,5 @@ class DetailViewModel {
         } onFail: { error in
             self.delegate?.didError(error!.localizedDescription)
         }
-
-
     }
-
 }
-
