@@ -9,7 +9,9 @@ The detail page lists the character's image, name, and abilities.
 Application Features
 
 Network : Alamofire
+
 Design : Snapkit,noStoryBoard,Lottie
+
 Architectural : MVVM
 
 
