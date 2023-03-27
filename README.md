@@ -11,7 +11,7 @@ The detail page lists the character's image, name, and abilities.
 
 
 Network : Alamofire<br>
-Design : Snapkit,noStoryBoard,Lottie<br>
+Design : Snapkit,noStoryBoard,Lottie,Kingfisher<br>
 Architectural : MVVM
 
 
