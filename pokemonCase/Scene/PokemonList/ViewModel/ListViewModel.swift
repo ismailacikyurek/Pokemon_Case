@@ -5,7 +5,6 @@
 //  Created by İSMAİL AÇIKYÜREK on 27.03.2023.
 //
 
-import Kingfisher
 import UIKit
 
 //MARK: Protocols

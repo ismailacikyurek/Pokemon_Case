@@ -10,7 +10,6 @@ import Foundation
 import UIKit
 import Alamofire
 
-
 //MARK: Protocols
 protocol PokemonServiceProtokol {
     func fethAllPosts<T:Codable>(url:String,onSuccess: @escaping (T) -> Void, onFail: @escaping (Error?) -> Void)

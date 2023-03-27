@@ -6,7 +6,6 @@
 //
 
 
-import Kingfisher
 import UIKit
 
 //MARK: Protocols
@@ -20,12 +19,12 @@ class DetailViewModel {
     weak var delegate : DetailViewModelProtocol?
     private let service : WebService = WebService()
     
-    var pokemonDetail : PokemonDetailModel?
+    var pokemonDetailModel : PokemonDetailModel?
     
     func fetchPokemonDetail(_ url : String) {
         service.fetchPokemonDetai(url: url) { response in
-            self.pokemonDetail = response
-            self.delegate?.didDetailSuccess(pokemonDetail: self.pokemonDetail)
+            self.pokemonDetailModel = response
+            self.delegate?.didDetailSuccess(pokemonDetail: self.pokemonDetailModel)
         } onFail: { error in
             self.delegate?.didError(error!.localizedDescription)
         }
