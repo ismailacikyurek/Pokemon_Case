@@ -6,7 +6,9 @@ The detail page lists the character's image, name, and abilities.
 
 
 
-Application Features
+
+<strong>Application Features</strong>
+
 
 Network : Alamofire
 
