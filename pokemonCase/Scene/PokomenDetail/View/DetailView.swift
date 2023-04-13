@@ -20,8 +20,8 @@ class DetailView: UIView{
         super.init(frame: .zero)
         addView()
         addTarget()
-        SetupUI()
-        LayoutUI()
+        setupUI()
+        layoutUI()
     }
     
     required init?(coder: NSCoder) {
@@ -40,7 +40,7 @@ extension DetailView : GeneralProtocol {
         
     }
     
-    func SetupUI() {
+    func setupUI() {
         self.backgroundColor = .systemGray4
         mainView.createView(backgroundColor: .white, cornerRadius: 60, shadowColor: UIColor.gray.cgColor, shadowOffset: CGSize(width: -23, height: 24))
         pokomonPhotoImageView.createUIImageView(contentMode: .scaleToFill,maskedToBounds: true,cornerRadius: 100)
@@ -48,7 +48,7 @@ extension DetailView : GeneralProtocol {
         pokomonNameLabel.createLabel(text: "PokemonName", textColor: .black, font: UIFont.systemFont(ofSize: 33), textAlignment: .center)
     }
     
-    func LayoutUI() {
+    func layoutUI() {
         mainViewConstraints()
         pokomonPhotoImageViewConstraints()
         pokomonNameLabelConstraints()

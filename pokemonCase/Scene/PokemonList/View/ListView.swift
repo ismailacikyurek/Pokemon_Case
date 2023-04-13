@@ -17,8 +17,8 @@ class ListView: UIView{
         super.init(frame: .zero)
         addView()
         addTarget()
-        SetupUI()
-        LayoutUI()
+        setupUI()
+        layoutUI()
     }
     
     required init?(coder: NSCoder) {
@@ -36,12 +36,12 @@ extension ListView : GeneralProtocol {
         
     }
     
-    func SetupUI() {
+    func setupUI() {
         self.backgroundColor = .white
      
     }
     
-    func LayoutUI() {
+    func layoutUI() {
         pokemonlistTableViewConstraints()
     }
     

@@ -32,7 +32,6 @@ class ListViewController: UIViewController {
 
 }
 
-
 extension ListViewController : ListViewModelProtocol {
 
     func didError(_ error: String) {

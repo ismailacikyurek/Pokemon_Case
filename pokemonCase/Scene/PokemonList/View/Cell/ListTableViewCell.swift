@@ -36,14 +36,13 @@ class ListTableViewCell: UITableViewCell {
         } onFail: { err in
             print("error")
         }
-
     }
     
     func configure(data : Result) {
         addView()
         addTarget()
-        SetupUI()
-        LayoutUI()
+        setupUI()
+        layoutUI()
         self.photoframeAnimate()
         self.pokemonNameLabel.text = data.name?.uppercased()
         self.updateUI(url: data.url!)
@@ -65,7 +64,7 @@ extension ListTableViewCell : GeneralProtocol {
     
     func addTarget() {}
     
-    func SetupUI() {
+    func setupUI() {
         self.iconImageView.createUIImageView(contentMode: .scaleToFill, maskedToBounds: true, cornerRadius: 50, borderColor: UIColor.black.cgColor, borderWidth : 0.6)
         self.pokemonNameLabel.createLabel(text: "",textColor: .black, textAlignment: .left)
         rightOkImageView.createUIImageView(image: UIImage(systemName: "chevron.right"),tintColor: .gray)
@@ -78,7 +77,7 @@ extension ListTableViewCell : GeneralProtocol {
         shapeLayer.fillColor = UIColor.clear.cgColor
     }
     
-    func LayoutUI() {
+    func layoutUI() {
         iconImageViewConstraints()
         pokemonNameLabelConstraints()
         rightOkImageViewConstraints()

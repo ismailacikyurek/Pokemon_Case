@@ -10,6 +10,6 @@ import Foundation
 protocol GeneralProtocol {
     func addView()
     func addTarget()
-    func SetupUI()
-    func LayoutUI()
+    func setupUI()
+    func layoutUI()
 }
