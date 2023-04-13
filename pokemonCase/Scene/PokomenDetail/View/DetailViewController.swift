@@ -19,14 +19,17 @@ class DetailViewController: UIViewController {
         super.viewDidLoad()
         view = detailView
         detailViewModel.delegate = self
-        navigationController?.navigationBar.tintColor = .black
-        navigationController?.navigationBar.topItem?.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
+        setNavBar()
         setTableViewDelegates()
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         detailViewModel.fetchPokemonDetail(detailUrl!)
+    }
+    func setNavBar() {
+        navigationController?.navigationBar.tintColor = .black
+        navigationController?.navigationBar.topItem?.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
     }
 }
 

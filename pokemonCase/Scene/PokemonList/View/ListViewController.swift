@@ -16,15 +16,18 @@ class ListViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         view = listView
-        self.navigationController?.navigationBar.prefersLargeTitles = true
-        self.navigationController?.navigationItem.largeTitleDisplayMode = .never
-        title = "Pokemon List"
+        setNavBar()
         listViewModel.delegate = self
         setTableViewDelegates()
     }
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         listViewModel.fetchAllPokemonList()
+    }
+    func setNavBar() {
+        self.navigationController?.navigationBar.prefersLargeTitles = true
+        self.navigationController?.navigationItem.largeTitleDisplayMode = .never
+        title = "Pokemon List"
     }
 
 }
