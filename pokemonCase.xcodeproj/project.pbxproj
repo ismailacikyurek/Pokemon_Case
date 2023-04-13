@@ -30,9 +30,12 @@
 		4433FD4F29D11C8700A41D3D /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4433FD4E29D11C8700A41D3D /* DetailViewController.swift */; };
 		4433FD5129D11C9800A41D3D /* DetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4433FD5029D11C9800A41D3D /* DetailViewModel.swift */; };
 		4433FD5629D1D43000A41D3D /* AlertMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4433FD5529D1D43000A41D3D /* AlertMessage.swift */; };
+		FBFE230952D21F20A5F11FFD /* Pods_pokemonCase.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2D5DA26FF9BEEDC7FA4FEC55 /* Pods_pokemonCase.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1D89147D7D5E7A4E2900B056 /* Pods-pokemonCase.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-pokemonCase.release.xcconfig"; path = "Target Support Files/Pods-pokemonCase/Pods-pokemonCase.release.xcconfig"; sourceTree = "<group>"; };
+		2D5DA26FF9BEEDC7FA4FEC55 /* Pods_pokemonCase.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_pokemonCase.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4433FCFF29D0F8B500A41D3D /* pokemonCase.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = pokemonCase.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4433FD0229D0F8B500A41D3D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4433FD0429D0F8B500A41D3D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -55,6 +58,7 @@
 		4433FD4E29D11C8700A41D3D /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		4433FD5029D11C9800A41D3D /* DetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewModel.swift; sourceTree = "<group>"; };
 		4433FD5529D1D43000A41D3D /* AlertMessage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertMessage.swift; sourceTree = "<group>"; };
+		F365A184D5D5F47719A3720B /* Pods-pokemonCase.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-pokemonCase.debug.xcconfig"; path = "Target Support Files/Pods-pokemonCase/Pods-pokemonCase.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,17 +69,30 @@
 				4433FD2C29D0FB4100A41D3D /* Kingfisher in Frameworks */,
 				4433FD2629D0FB0A00A41D3D /* Alamofire in Frameworks */,
 				4433FD2929D0FB3200A41D3D /* SnapKit in Frameworks */,
+				FBFE230952D21F20A5F11FFD /* Pods_pokemonCase.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		13698654DF9B7E4A84C3E273 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				F365A184D5D5F47719A3720B /* Pods-pokemonCase.debug.xcconfig */,
+				1D89147D7D5E7A4E2900B056 /* Pods-pokemonCase.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		4433FCF629D0F8B500A41D3D = {
 			isa = PBXGroup;
 			children = (
 				4433FD0129D0F8B500A41D3D /* pokemonCase */,
 				4433FD0029D0F8B500A41D3D /* Products */,
+				13698654DF9B7E4A84C3E273 /* Pods */,
+				658E685E356BD3BECE16A821 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -259,6 +276,14 @@
 			path = Cell;
 			sourceTree = "<group>";
 		};
+		658E685E356BD3BECE16A821 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				2D5DA26FF9BEEDC7FA4FEC55 /* Pods_pokemonCase.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -266,6 +291,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 4433FD1329D0F8B600A41D3D /* Build configuration list for PBXNativeTarget "pokemonCase" */;
 			buildPhases = (
+				6F213DC67EC080C1B9BAB7E4 /* [CP] Check Pods Manifest.lock */,
 				4433FCFB29D0F8B500A41D3D /* Sources */,
 				4433FCFC29D0F8B500A41D3D /* Frameworks */,
 				4433FCFD29D0F8B500A41D3D /* Resources */,
@@ -309,9 +335,9 @@
 			);
 			mainGroup = 4433FCF629D0F8B500A41D3D;
 			packageReferences = (
-				4433FD2429D0FB0A00A41D3D /* XCRemoteSwiftPackageReference "Alamofire" */,
-				4433FD2729D0FB3200A41D3D /* XCRemoteSwiftPackageReference "SnapKit" */,
-				4433FD2A29D0FB4100A41D3D /* XCRemoteSwiftPackageReference "Kingfisher" */,
+				4433FD2429D0FB0A00A41D3D /* XCRemoteSwiftPackageReference "Alamofire.git" */,
+				4433FD2729D0FB3200A41D3D /* XCRemoteSwiftPackageReference "SnapKit.git" */,
+				4433FD2A29D0FB4100A41D3D /* XCRemoteSwiftPackageReference "Kingfisher.git" */,
 			);
 			productRefGroup = 4433FD0029D0F8B500A41D3D /* Products */;
 			projectDirPath = "";
@@ -333,6 +359,31 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		6F213DC67EC080C1B9BAB7E4 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-pokemonCase-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		4433FCFB29D0F8B500A41D3D /* Sources */ = {
@@ -490,6 +541,7 @@
 		};
 		4433FD1429D0F8B600A41D3D /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F365A184D5D5F47719A3720B /* Pods-pokemonCase.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -519,6 +571,7 @@
 		};
 		4433FD1529D0F8B600A41D3D /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1D89147D7D5E7A4E2900B056 /* Pods-pokemonCase.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -570,7 +623,7 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		4433FD2429D0FB0A00A41D3D /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+		4433FD2429D0FB0A00A41D3D /* XCRemoteSwiftPackageReference "Alamofire.git" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
 			requirement = {
@@ -578,7 +631,7 @@
 				kind = branch;
 			};
 		};
-		4433FD2729D0FB3200A41D3D /* XCRemoteSwiftPackageReference "SnapKit" */ = {
+		4433FD2729D0FB3200A41D3D /* XCRemoteSwiftPackageReference "SnapKit.git" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/SnapKit/SnapKit.git";
 			requirement = {
@@ -586,7 +639,7 @@
 				kind = branch;
 			};
 		};
-		4433FD2A29D0FB4100A41D3D /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
+		4433FD2A29D0FB4100A41D3D /* XCRemoteSwiftPackageReference "Kingfisher.git" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/onevcat/Kingfisher.git";
 			requirement = {
@@ -599,17 +652,17 @@
 /* Begin XCSwiftPackageProductDependency section */
 		4433FD2529D0FB0A00A41D3D /* Alamofire */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 4433FD2429D0FB0A00A41D3D /* XCRemoteSwiftPackageReference "Alamofire" */;
+			package = 4433FD2429D0FB0A00A41D3D /* XCRemoteSwiftPackageReference "Alamofire.git" */;
 			productName = Alamofire;
 		};
 		4433FD2829D0FB3200A41D3D /* SnapKit */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 4433FD2729D0FB3200A41D3D /* XCRemoteSwiftPackageReference "SnapKit" */;
+			package = 4433FD2729D0FB3200A41D3D /* XCRemoteSwiftPackageReference "SnapKit.git" */;
 			productName = SnapKit;
 		};
 		4433FD2B29D0FB4100A41D3D /* Kingfisher */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 4433FD2A29D0FB4100A41D3D /* XCRemoteSwiftPackageReference "Kingfisher" */;
+			package = 4433FD2A29D0FB4100A41D3D /* XCRemoteSwiftPackageReference "Kingfisher.git" */;
 			productName = Kingfisher;
 		};
 /* End XCSwiftPackageProductDependency section */
