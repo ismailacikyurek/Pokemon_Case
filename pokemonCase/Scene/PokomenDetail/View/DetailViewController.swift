@@ -39,7 +39,7 @@ extension DetailViewController : DetailViewModelProtocol {
     }
     
     func didError(_ error: String) {
-        AlertMessage.alertMessageShow(title: .error, message: error, vc: self)
+        alertMessageShow(title: .error, message: error)
     }
 }
 

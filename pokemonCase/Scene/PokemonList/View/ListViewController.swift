@@ -33,7 +33,7 @@ class ListViewController: UIViewController {
 extension ListViewController : ListViewModelProtocol {
 
     func didError(_ error: String) {
-        AlertMessage.alertMessageShow(title: .error, message: error, vc: self)
+       alertMessageShow(title: .error, message: error)
     }
     
     func didAllListSuccess() {

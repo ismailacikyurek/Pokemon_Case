@@ -7,12 +7,12 @@
 
 import UIKit
     
-class AlertMessage {
-    static func alertMessageShow(title : successOrError,message : String,vc: UIViewController) {
+extension UIViewController {
+     func alertMessageShow(title : successOrError,message : String) {
         let alert = UIAlertController(title: title.rawValue, message: message, preferredStyle: .alert)
         let ok = UIAlertAction(title: "Ok", style: .default)
         alert.addAction(ok)
-        vc.present(alert, animated: true)
+        present(alert, animated: true)
     }
 }
 

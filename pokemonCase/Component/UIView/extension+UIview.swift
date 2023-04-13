@@ -6,16 +6,6 @@
 //
 
 import Foundation
-
-
-
-//
-//extension+UIview.swift
-//  pokemonCase
-//
-//  Created by İSMAİL AÇIKYÜREK on 27.03.2023.
-//
-
 import UIKit
 
 extension UIView {
