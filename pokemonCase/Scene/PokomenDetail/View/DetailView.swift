@@ -43,6 +43,9 @@ extension DetailView : GeneralProtocol {
     func setupUI() {
         self.backgroundColor = .systemGray4
         mainView.createView(backgroundColor: .white, cornerRadius: 60, shadowColor: UIColor.gray.cgColor, shadowOffset: CGSize(width: -23, height: 24))
+//        mainView.layer.cornerRadius = 50
+//        mainView.layer.maskedCorners = [.layerMinXMaxYCorner,.layerMinXMinYCorner]
+
         pokomonPhotoImageView.createUIImageView(contentMode: .scaleToFill,maskedToBounds: true,cornerRadius: 100)
         pokomonPhotoImageView.alpha = 0.0
         pokomonNameLabel.createLabel(text: "PokemonName", textColor: .black, font: UIFont.systemFont(ofSize: 33), textAlignment: .center)
