@@ -8,14 +8,22 @@
 import UIKit
 
 //MARK: Protocols
-protocol ListViewModelProtocol: AnyObject {
+protocol ListViewModelOutputProtocol: AnyObject {
     func didError(_ error: String)
     func didAllListSuccess()
 }
-
-class ListViewModel {
+protocol ListViewModelProtocol: AnyObject {
+    func fetchAllPokemonList()
+    func fetchPokemonDetail(_ url : String)
     
-    weak var delegate : ListViewModelProtocol?
+    var delegate : ListViewModelOutputProtocol? {get set}
+    var pokemonList : PokemonListModel? {get }
+    var pokemonDetail : PokemonDetailModel? {get }
+}
+
+class ListViewModel : ListViewModelProtocol {
+    
+    weak var delegate : ListViewModelOutputProtocol?
     private let service : WebService = WebService()
     
     var pokemonList : PokemonListModel?

@@ -9,22 +9,26 @@
 import UIKit
 
 //MARK: Protocols
-protocol DetailViewModelProtocol: AnyObject {
+protocol DetailViewModelOutputProtocol: AnyObject {
     func didError(_ error: String)
     func didDetailSuccess(pokemonDetail : PokemonDetailModel?)
 }
+protocol DetailViewModelProtocol: AnyObject {
+    var delegate : DetailViewModelOutputProtocol? {get set}
+    var pokemonDetailModel : PokemonDetailModel? {get }
+    func fetchPokemonDetail(_ url : String)
+}
 
-class DetailViewModel {
-    
-    weak var delegate : DetailViewModelProtocol?
+class DetailViewModel : DetailViewModelProtocol {
+
+    weak var delegate : DetailViewModelOutputProtocol?
     private let service : WebService = WebService()
-    
     var pokemonDetailModel : PokemonDetailModel?
     
     func fetchPokemonDetail(_ url : String) {
         service.fetchPokemonDetai(url: url) { response in
             self.pokemonDetailModel = response
-            self.delegate?.didDetailSuccess(pokemonDetail: self.pokemonDetailModel)
+            self.delegate?.didDetailSuccess(pokemonDetail: response)
         } onFail: { error in
             self.delegate?.didError(error!.localizedDescription)
         }

@@ -10,7 +10,7 @@ import UIKit
 class ListViewController: UIViewController {
     
     let listView = ListView()
-    let listViewModel = ListViewModel()
+    let listViewModel :ListViewModelProtocol  = ListViewModel()
     
     // MARK: Lifecycle
     override func viewDidLoad() {
@@ -32,7 +32,7 @@ class ListViewController: UIViewController {
 
 }
 
-extension ListViewController : ListViewModelProtocol {
+extension ListViewController : ListViewModelOutputProtocol {
 
     func didError(_ error: String) {
        alertMessageShow(title: .error, message: error)

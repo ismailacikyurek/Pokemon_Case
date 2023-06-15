@@ -32,30 +32,25 @@ extension ListView : GeneralProtocol {
         addSubviews(pokemonlistTableView)
     }
     
-    func addTarget() {
-        
-    }
+    func addTarget() {}
     
     func setupUI() {
         self.backgroundColor = .white
-     
     }
     
     func layoutUI() {
         pokemonlistTableViewConstraints()
     }
-    
-    
 }
-extension ListView {
 
+extension ListView {
+    
     func pokemonlistTableViewConstraints() {
         self.pokemonlistTableView.snp.makeConstraints { make in
             make.top.equalTo(self.snp.top).offset(90)
             make.leading.equalTo(self.snp.leading).offset(5)
             make.trailing.equalTo(self.snp.trailing).offset(5)
             make.bottom.equalTo(self.snp.bottom).offset(-10)
-            
         }
     }
 }

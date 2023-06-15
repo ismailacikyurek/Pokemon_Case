@@ -11,7 +11,7 @@ import Kingfisher
 class DetailViewController: UIViewController {
 
     let detailView = DetailView()
-    let detailViewModel = DetailViewModel()
+    let detailViewModel : DetailViewModelProtocol = DetailViewModel()
     
     var detailUrl : String?
     
@@ -25,7 +25,10 @@ class DetailViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        detailViewModel.fetchPokemonDetail(detailUrl!)
+        if let url = self.detailUrl {
+            detailViewModel.fetchPokemonDetail(url)
+        }
+        
     }
     func setNavBar() {
         navigationController?.navigationBar.tintColor = .black
@@ -33,7 +36,7 @@ class DetailViewController: UIViewController {
     }
 }
 
-extension DetailViewController : DetailViewModelProtocol {
+extension DetailViewController : DetailViewModelOutputProtocol {
     func didDetailSuccess(pokemonDetail: PokemonDetailModel?) {
         detailView.abilityTableView.reloadData()
         detailView.pokomonNameLabel.text = pokemonDetail?.name.uppercased()
