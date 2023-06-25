@@ -82,7 +82,6 @@
 				F365A184D5D5F47719A3720B /* Pods-pokemonCase.debug.xcconfig */,
 				1D89147D7D5E7A4E2900B056 /* Pods-pokemonCase.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -335,9 +334,9 @@
 			);
 			mainGroup = 4433FCF629D0F8B500A41D3D;
 			packageReferences = (
-				4433FD2429D0FB0A00A41D3D /* XCRemoteSwiftPackageReference "Alamofire.git" */,
-				4433FD2729D0FB3200A41D3D /* XCRemoteSwiftPackageReference "SnapKit.git" */,
-				4433FD2A29D0FB4100A41D3D /* XCRemoteSwiftPackageReference "Kingfisher.git" */,
+				4433FD2429D0FB0A00A41D3D /* XCRemoteSwiftPackageReference "Alamofire" */,
+				4433FD2729D0FB3200A41D3D /* XCRemoteSwiftPackageReference "SnapKit" */,
+				4433FD2A29D0FB4100A41D3D /* XCRemoteSwiftPackageReference "Kingfisher" */,
 			);
 			productRefGroup = 4433FD0029D0F8B500A41D3D /* Products */;
 			projectDirPath = "";
@@ -623,7 +622,7 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		4433FD2429D0FB0A00A41D3D /* XCRemoteSwiftPackageReference "Alamofire.git" */ = {
+		4433FD2429D0FB0A00A41D3D /* XCRemoteSwiftPackageReference "Alamofire" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
 			requirement = {
@@ -631,7 +630,7 @@
 				kind = branch;
 			};
 		};
-		4433FD2729D0FB3200A41D3D /* XCRemoteSwiftPackageReference "SnapKit.git" */ = {
+		4433FD2729D0FB3200A41D3D /* XCRemoteSwiftPackageReference "SnapKit" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/SnapKit/SnapKit.git";
 			requirement = {
@@ -639,7 +638,7 @@
 				kind = branch;
 			};
 		};
-		4433FD2A29D0FB4100A41D3D /* XCRemoteSwiftPackageReference "Kingfisher.git" */ = {
+		4433FD2A29D0FB4100A41D3D /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/onevcat/Kingfisher.git";
 			requirement = {
@@ -652,17 +651,17 @@
 /* Begin XCSwiftPackageProductDependency section */
 		4433FD2529D0FB0A00A41D3D /* Alamofire */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 4433FD2429D0FB0A00A41D3D /* XCRemoteSwiftPackageReference "Alamofire.git" */;
+			package = 4433FD2429D0FB0A00A41D3D /* XCRemoteSwiftPackageReference "Alamofire" */;
 			productName = Alamofire;
 		};
 		4433FD2829D0FB3200A41D3D /* SnapKit */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 4433FD2729D0FB3200A41D3D /* XCRemoteSwiftPackageReference "SnapKit.git" */;
+			package = 4433FD2729D0FB3200A41D3D /* XCRemoteSwiftPackageReference "SnapKit" */;
 			productName = SnapKit;
 		};
 		4433FD2B29D0FB4100A41D3D /* Kingfisher */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 4433FD2A29D0FB4100A41D3D /* XCRemoteSwiftPackageReference "Kingfisher.git" */;
+			package = 4433FD2A29D0FB4100A41D3D /* XCRemoteSwiftPackageReference "Kingfisher" */;
 			productName = Kingfisher;
 		};
 /* End XCSwiftPackageProductDependency section */
